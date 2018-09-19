@@ -1,2 +1,4 @@
 # CIT261
-repo for CIT261 assignments
+Portfolio for CIT261 assignments
+
+This repo holds the work for my Mobile App classwork/projects.
