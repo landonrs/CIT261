@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>Range and Sum</title>
+  <script>
+    function range(num1, num2) {
+      let rangeArray = [];
+      if (num1 < num2){
+      for (var i = num1; i <= num2; i++ ) {
+          rangeArray.push(i);
+      }
+    }
+    return rangeArray;
+    }
+
+    function sum(numbers) {
+      let sum = 0;
+      for (var number in numbers){
+        sum += numbers[number];
+      }
+      console.log(sum);
+      document.getElementById('rangeSum').innerHTML = sum;
+    }
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  enter first number(must be less than second number):<input id='num1'>
+  enter second number(must be greater than first number):<input id='num2'>
+  <button onclick="sum(range(parseInt(document.getElementById('num1').value), parseInt(document.getElementById('num2').value)))">Get sum of range</button>
+  <section id="rangeSum"></section>
+</body>
+</html>

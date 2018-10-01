@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>ReverseArray</title>
+  <script>
+    function reverseArray(anArray) {
+        let newArray = [];
+        for(var i = (anArray.length - 1); i >= 0; i--){
+          newArray.push(anArray[i])
+        }
+        console.log(newArray)
+        document.getElementById("testOutput").innerHTML = newArray;
+    }
+
+    function reverseArrayInPlace(anArray) {
+      for(var i = 0; i < anArray.length / 2; i++) {
+        let frontValue = anArray[i];
+        let backValue = anArray[anArray.length - (i + 1)]
+        anArray[i] = backValue;
+        anArray[anArray.length - (i + 1)] = frontValue;
+      }
+      console.log(anArray)
+        document.getElementById("testOutput").innerHTML = anArray;
+    }
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <button onclick="reverseArray([1,2,3,4])">test reverse array</button>
+  <button onclick="reverseArrayInPlace([1,2,3,4,5,6,7,8,9])">test reverse array in place</button>
+  <section id="testOutput"></section>
+</body>
+</html>

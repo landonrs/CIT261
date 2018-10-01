@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <title>aList - LS</title>
+  <script>
+    function arrayToList(anArray) {
+      let list = {};
+      var head = undefined;
+      for (var i = anArray.length - 1; i >= 0; i--) {
+        if (i == anArray.length - 1) {
+          head = {value: anArray[anArray.length - 1], rest: null};
+        }
+        else {
+          let tempHead = { value: anArray[i], rest: head };
+          head = tempHead;
+        }
+      }
+      list = head;
+      let stringList = JSON.stringify(head);
+      console.log(stringList);
+      document.getElementById("testOutput").innerHTML = stringList;
+      return list;
+    }
+
+    function listToArray(aList) {
+      let anArray = [];
+      let head = aList;
+      while(head["rest"] != null) {
+        anArray.push(head["value"]);
+        head = head["rest"];
+      }
+      console.log(anArray);
+      document.getElementById("testOutput").innerHTML = anArray;
+      
+      
+    }
+
+    function prepend(element, aList) {
+      let newList = {value: element, rest: aList};
+      console.log(JSON.stringify(newList));
+      document.getElementById("testOutput").innerHTML =JSON.stringify(newList);
+      return newList;
+    }
+
+    function nth(number, aList) {
+      if (aList["rest"] == null) {
+        return undefined
+      }
+      if (number <= 0) {
+        return aList["value"];
+      }
+      let value = nth(number - 1, aList["rest"]);
+      console.log(value);
+      document.getElementById("testOutput").innerHTML = value;
+      return value;
+    }
+
+  </script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <button onclick="arrayToList([1,2,3,4])">test arrayToList</button>
+  <button onclick="listToArray(arrayToList([1,2,3,4]))">test ListToArray</button>
+  <button onclick="prepend(0, arrayToList([1,2,3,4]))">test prepend</button>
+  <button onclick="nth(2, arrayToList([1,2,3,4]))">test nth</button>
+  <section id="testOutput"></section>
+</body>
+</html>
