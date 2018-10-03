@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>Balloon - LS</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+	<p id="balloon">🎈</p>
+</body>
+<script>
+  let size = 20;
+  document.body.addEventListener("keyup", changeBalloonSize);
+
+  function changeBalloonSize(event){
+    let balloon = document.getElementById("balloon");
+    if (event.key == "ArrowUp") {
+      if(size > 150){
+        balloon.innerHTML = "💥";
+        document.body.removeEventListener("keyup", changeBalloonSize);
+      }
+      else{
+        size *= 1.10;
+        balloon.style.fontSize = size + "px";
+        event.preventDefault();
+        console.log("ballon size = " + balloon.style.fontSize);
+        }
+      }
+    else if (event.key == "ArrowDown") {
+      size *= 0.90;
+      balloon.style.fontSize = size + "px";
+      event.preventDefault();
+      console.log("ballon size = " + balloon.style.fontSize);
+    }
+  }
+ 
+</script>
+</html>
