@@ -26,7 +26,7 @@ const calculator = {
     console.dir(button);
     
 
-    let inputBox = this._inputOutput;
+    let inputBox = calculator._inputOutput;
 
     switch (button.innerHTML) {
       case 'M':
@@ -60,8 +60,10 @@ const calculator = {
     }
   }
 };
-// const buttonContainer = document.querySelector('.calcButtons');
-// buttonContainer.addEventListener('touchend', calculator.buttonClicked);
+const buttonContainer = document.querySelector('.calcButtons');
+buttonContainer.addEventListener('touchend', (e) => {
+  calculator.buttonClicked(e.target);
+});
 
 // function buttonClicked(button) {
 //   console.log(button);

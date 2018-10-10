@@ -37,7 +37,7 @@
 
 </head>
 
-<body>
+<body onload="insertNumbersIntoSelect()"
     <h1> Food Storage Calculator</h1>
     <p> 
         This application is designed to help you determine the amount of food you 
@@ -70,8 +70,7 @@
         
     </div>
     <div  style="margin-top: 100px;">
-        <p class="selection-text">Include cost of water containers</p>
-        <input type="checkbox" name="water-check" style="height: 50px; width: 50px;"><br>
+        <input type="checkbox" name="water-check" style="height: 50px; width: 50px;">Include cost of water containers<br>
     </div>
     <div>
     <table>
@@ -82,7 +81,7 @@
             <th>Estimated food item cost</th>
         </tr>
         <tr>
-            <td><img src="add-item.jpg"></td>
+            <td><img src="add-item.jpg" id="add-food-button"></td>
             <td></td>
             <td></td>
             <td></td>

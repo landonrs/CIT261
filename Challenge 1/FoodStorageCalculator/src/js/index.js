@@ -12,8 +12,8 @@ class FoodItem {
       }
       return this.estimatedNeededAmount;
   };
-  this.getEstimatedTotalCost = function(){
-      return (estimatedNeededAmount / cupsPerCan) * costPerCan;
+  this.getEstimatedItemCost = function(){
+      return (this.estimatedNeededAmount / this.cupsPerCan) * this.costPerCan;
   };
 
 };
@@ -26,17 +26,23 @@ var macaroni = new FoodItem("Macaroni", 4.25, 32, [.5, 1]);
 var flour = new FoodItem("Flour", 4.25, 32, [.5, 1]);
 var oats = new FoodItem("Oats", 4.25, 32, [.5, 1]);
 
+
 function insertNumbersIntoSelect(){
     var numChildrenSelect = document.getElementById('childrenSelect');
     var numAdultSelect = document.getElementById('adultSelect');
 
     for (var i = 1; i<=50; i++){
-        var option = document.createElement('option');
-        option.value = i;
-        option.innerHTML = i;
-        numChildrenSelect.appendChild(option);
-        numAdultSelect.appendChild(option);
+        var childNumberOption = document.createElement('option');
+        var adultNumberOption = document.createElement('option');
+        childNumberOption.value = i;
+        adultNumberOption.value = i;
+
+        childNumberOption.innerHTML = i;
+        adultNumberOption.innerHTML = i;
+        
+        numChildrenSelect.appendChild(childNumberOption);
+        numAdultSelect.appendChild(adultNumberOption);
     }
 }
 
-module.exports = {rice: rice, FoodItem: FoodItem, refriedBeans: refriedBeans, potato: potato, macaroni: macaroni, flour: flour, oats:oats};
+module.exports = {rice: rice, FoodItem: FoodItem};
