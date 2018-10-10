@@ -5,8 +5,11 @@ function foodItem(name, costPerCan, cupsPerCan, mealRationAmount) {
     this.mealRationAmount = mealRationAmount;
     this.percentOfDiet = 0;
     this.estimatedNeededAmount = 0;
-    this.determineNeededAmount = function(storageLength) {
-        this.estimatedNeededAmount =  mealRationAmount * (percentOfDiet * 3) * storageLength;
+    this.determineNeededAmount = function(storageLength, numPeople) {
+        this.estimatedNeededAmount = 0;
+        for(var i in numPeople){
+            this.estimatedNeededAmount +=  (mealRationAmount[i] * numPeople[i]) * (percentOfDiet * 3) * storageLength;
+        }
     }
     this.getEstimatedTotalCost = function(){
         return (estimatedNeededAmount / cupsPerCan) * costPerCan;
