@@ -13,7 +13,7 @@ class FoodItem {
         return this.estimatedNeededAmount;
     };
     this.getEstimatedItemCost = function(){
-        return (this.estimatedNeededAmount / this.cupsPerCan) * this.costPerCan;
+        return Math.ceil(this.estimatedNeededAmount / this.cupsPerCan) * this.costPerCan;
     };
   
   };

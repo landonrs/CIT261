@@ -29,9 +29,6 @@ describe("Food Calculator", function() {
     it("should calculate the estimated cost of the food item amount", function(){
       var rice = foodCalculator.rice;
       rice.determineNeededAmount(30, [2, 2], 1);
-      assert.equal(35.86, rice.getEstimatedItemCost());
-    });
-    it("should add food item to table", function() {
-      
+      assert.equal(38.25, Math.round(rice.getEstimatedItemCost() * 100) / 100);
     });
   })
