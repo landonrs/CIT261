@@ -19,15 +19,17 @@ class FoodItem {
   };
   }
   
-  var rice = new FoodItem("Rice", 4.25, 32, [.5, 1]);
-  var refriedBeans = new FoodItem("Refried Beans", 4.25, 32, [.5, 1]);
-  var potato = new FoodItem("Potato Flakes", 4.25, 32, [.5, 1]);
-  var macaroni = new FoodItem("Macaroni", 4.25, 32, [.5, 1]);
-  var flour = new FoodItem("Flour", 4.25, 32, [.5, 1]);
-  var oats = new FoodItem("Oats", 4.25, 32, [.5, 1]);
+  var rice = new FoodItem("Rice", 6.46, 13.5, [.25, .5]);
+  var refriedBeans = new FoodItem("Refried Beans", 7.54, 16, [.5, 1]);
+  var potato = new FoodItem("Potato Flakes", 6.04, 13, [.3, .6]);
+  var macaroni = new FoodItem("Macaroni", 3.71, 12, [.5, 1]);
+  var flour = new FoodItem("Flour", 5.17, 16, [.25, .5]);
+  var oats = new FoodItem("Oats", 5.00, 16, [.5, 1]);
+  var apple = new FoodItem("Apple Slices", 11.25, 2, [.125, .25]);
+  var carrot = new FoodItem("Carrots", 11.50, 5.625, [.125, .25]);
   
   //This array holds the Items that have not been added to the table yet
-  var unusedFoodItems = [rice, refriedBeans, potato];
+  var unusedFoodItems = [rice, refriedBeans, potato, macaroni, flour, oats, apple, carrot];
   //This array holds the food items that have been added to the table
   var tableItems = [];
 

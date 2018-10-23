@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "jsdom": "^12.2.0",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "sinon": "^7.0.0"
   }
 }

@@ -74,7 +74,7 @@
         row.id = foodChoice.name + "-row";
         row.innerHTML = `
         <td>${foodChoice.name}</td>
-        <td><select id="${foodChoice.name}-per" class="percentage" onchange="updateTable()">${percentages}</select></td>
+        <td>Select a percentage value</br><select id="${foodChoice.name}-per" class="percentage" onchange="updateTable()">${percentages}</select></td>
         <td id="estimated-amount-${foodChoice.name}"></td>
         <td id="estimated-cost-${foodChoice.name}"></td>
         <td><img src="remove-item.png" id="remove-food-button-${foodChoice.name}" ontouchstart="remove_item('${row.id}','${foodChoice.name}')"></td>`;
@@ -106,11 +106,10 @@
     unusedFoodItems.push(removedItem);
     insertFoodItems();
     updateTable();
-
-
     
   }
 
+  
   function updateTable(){
     // get storage length
     var storageSelect = document.getElementById("storageSelect");
@@ -143,4 +142,4 @@
     console.log("Table updated!");
   }
 
-  module.exports = {remove_item: remove_item, add_item: add_item, insertFoodItems: insertFoodItems};
+  module.exports = {remove_item: remove_item, add_item: add_item, insertFoodItems: insertFoodItems, updateTable: updateTable};

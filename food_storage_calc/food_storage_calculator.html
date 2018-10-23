@@ -20,16 +20,16 @@
 
 <body onload="setUpPage()">
     <div id="head-banner">
-    <h1 style="text-align: center;">Food Storage Calculator</h1>
+    <h1 style="text-align: center;color:white;">Food Storage Calculator</h1>
     </div>
-    <p> 
+    <h3> 
         This application is designed to help you determine the amount of food you 
         would need for your family or group to live off of for a specific period of
-        time and how much that food would cost.</p>
-    <p>
+        time and how much that food would cost.</h3>
+    <h3>
         Enter the requested values into the fields below to calculate your food storage needs.
-    </p>
-    <div style="margin-top: 100px;">
+    </h3>
+    <div class="userOptionsDiv" style="margin-top: 100px;">
             <select class="user-options" id="storageSelect">
                     <option value=30>1 Month</option>
                     <option value=90>3 Months</option>
@@ -42,20 +42,18 @@
 
         
     </div>
-    <div style="margin-top: 100px;">
+    <div class="userOptionsDiv" style="margin-top: 100px;">
         <select class="user-options" id="childrenSelect"></select>
         <p class="selection-text">Number of children? (Age 12 and under)</p>
         
     </div>
-    <div style="margin-top: 100px;">
+    <div class="userOptionsDiv" style="margin-top: 100px;">
         <select class="user-options" id="adultSelect"></select>
         <p class="selection-text">Number of Adults?</p>
         
     </div>
-    <div  style="margin-top: 100px;">
-        <input type="checkbox" name="water-check" style="height: 50px; width: 50px;">Include cost of water containers<br>
-    </div>
     <div>
+    Select food item to add to calculator
     <img src="add-item.jpg" id="add-food-button">
     <select id="food-items"></select>
     <table id="food-table">
