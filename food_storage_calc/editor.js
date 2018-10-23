@@ -77,7 +77,7 @@
         <td>Select a percentage value</br><select id="${foodChoice.name}-per" class="percentage" onchange="updateTable()">${percentages}</select></td>
         <td id="estimated-amount-${foodChoice.name}"></td>
         <td id="estimated-cost-${foodChoice.name}"></td>
-        <td><img src="remove-item.png" id="remove-food-button-${foodChoice.name}" ontouchstart="remove_item('${row.id}','${foodChoice.name}')"></td>`;
+        <td><img src="remove-item.png" class="remove-button" id="remove-food-button-${foodChoice.name}" ontouchstart="remove_item('${row.id}','${foodChoice.name}')"></td>`;
         table.appendChild(row);
 
         // add item to array of items on table remove from unused items

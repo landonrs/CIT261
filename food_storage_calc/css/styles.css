@@ -18,17 +18,22 @@
   }
 
   #add-food-button {
-    margin-right: 30vw;
+    margin-right: 10vw;
     margin-top: 1em;
     height: 75px;
     width: 75px;
     float: right;
   }
 
+  .remove-button{
+    min-width: 25px;
+    min-height: 25px;
+  }
+
   #head-banner{
     margin-top: 0px;
     background-color: steelblue;
-    height: 3em;
+    height: 10em;
     width: 100%;
     text-align: center;
   }
@@ -42,6 +47,7 @@
 
   table, th, td {
     border: 1px solid black;
+
     }
 
   .user-options {
