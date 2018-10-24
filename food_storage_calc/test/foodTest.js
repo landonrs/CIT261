@@ -25,11 +25,13 @@ describe("Food Calculator", function() {
     });
     it("should calculate the estimated needed amount", function(){
       var rice = foodCalculator.rice;
+      // test and verify
       assert.equal(135, rice.determineNeededAmount(30, [2, 2], 1));
     });
     it("should calculate the estimated cost of the food item amount", function(){
       var rice = foodCalculator.rice;
       rice.determineNeededAmount(30, [2, 2], 1);
+      // test and verify
       assert.equal(64.60, Math.round(rice.getEstimatedItemCost() * 100) / 100);
     });
   })
