@@ -8,9 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- change the path below to scss/styles.scss to use SASS -->
   <link rel="stylesheet" href="css/styles.css">
-  <script>
-
-  </script>
 
   <style>
 
@@ -19,15 +16,17 @@
 </head>
 
 <body onload="setUpPage()">
-    <h1> Food Storage Calculator</h1>
-    <p> 
+    <div id="head-banner">
+    <h1 style="text-align: center;color:white; padding-top:1em;">Food Storage Calculator</h1>
+    </div>
+    <h3> 
         This application is designed to help you determine the amount of food you 
         would need for your family or group to live off of for a specific period of
-        time and how much that food would cost.</p>
-    <p>
+        time and how much that food would cost.</h3>
+    <h3>
         Enter the requested values into the fields below to calculate your food storage needs.
-    </p>
-    <div style="margin-top: 100px;">
+    </h3>
+    <div class="userOptionsDiv" style="margin-top: 100px;">
             <select class="user-options" id="storageSelect">
                     <option value=30>1 Month</option>
                     <option value=90>3 Months</option>
@@ -40,20 +39,20 @@
 
         
     </div>
-    <div style="margin-top: 100px;">
+    <div class="userOptionsDiv" style="margin-top: 100px;">
         <select class="user-options" id="childrenSelect"></select>
         <p class="selection-text">Number of children? (Age 12 and under)</p>
         
     </div>
-    <div style="margin-top: 100px;">
+    <div class="userOptionsDiv" style="margin-top: 100px;">
         <select class="user-options" id="adultSelect"></select>
         <p class="selection-text">Number of Adults?</p>
         
     </div>
-    <div  style="margin-top: 100px;">
-        <input type="checkbox" name="water-check" style="height: 50px; width: 50px;">Include cost of water containers<br>
-    </div>
     <div>
+    Select food item to add to calculator
+    <img src="add-item.svg" id="add-food-button">
+    <select id="food-items"></select>
     <table id="food-table">
         <tr>
             <th>Type of Food</th>
@@ -62,14 +61,16 @@
             <th>Estimated food item cost</th>
         </tr>
         <tr>
-            <td><select id="food-items"></select><img src="add-item.jpg" id="add-food-button"></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
     </table>
+    <h2 id="total-cost">Total Estimated Cost: $0.00</h2>
+    <p style="max-width: 80%;">The food item prices and serving amounts are estimated based on the information found at the following website:
+        <a href="https://store.lds.org/lds/CategoryDisplay?storeId=10151&urlLangId=-1&beginIndex=0&urlRequestType=Ajax&categoryId=3074457345616678849&pageView=grid&langId=-1&catalogId=3074457345616676768">store.lds.org</a></p>
     </div>
-    <div><h2 id="total-cost">Total Estimated Cost: $0.00</h2></div>
 
 
     <script src="food.js"></script>    
