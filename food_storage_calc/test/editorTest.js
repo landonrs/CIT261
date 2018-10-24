@@ -25,6 +25,7 @@ describe("adding items with table editor", function() {
   });
 
   afterEach(function(){
+    // reset initial state of foodItem arrays
     global.unusedFoodItems = tempUnusedFoodItems;
     global.tableItems = tempTableItems;
     console.log("resetting global variables")
@@ -57,7 +58,7 @@ describe("removing items with table editor", function() {
 });
 
 
-// utility function for deep copies
+// utility function for making deep copies of arrays
 function copy(o) {
   var output, v, key;
   output = Array.isArray(o) ? [] : {};

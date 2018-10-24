@@ -41,7 +41,7 @@
     var add_button = document.getElementById("add-food-button");
     add_button.addEventListener("touchend", add_item);
     var userOptionButtons = document.getElementsByClassName("user-options");
-    console.dir(userOptionButtons);
+    // console.dir(userOptionButtons);
     for (var i = 0; i < userOptionButtons.length; i++) {
         userOptionButtons[i].addEventListener("change", updateTable);
     }
@@ -117,7 +117,7 @@
     // get number of children
     var childrenSelect = document.getElementById("childrenSelect");
     var numChildren = childrenSelect.options[childrenSelect.selectedIndex].value;
-    //get number of adults
+    // get number of adults
     var adultSelect = document.getElementById("adultSelect");
     var numAdults = adultSelect.options[adultSelect.selectedIndex].value;
 
@@ -139,7 +139,7 @@
     });
 
     document.getElementById("total-cost").innerHTML = "Total Estimated Cost: $" + totalCost.toFixed(2);
-    console.log("Table updated!");
+    //console.log("Table updated!");
   }
 
   module.exports = {remove_item: remove_item, add_item: add_item, insertFoodItems: insertFoodItems, updateTable: updateTable};
