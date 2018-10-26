@@ -33,9 +33,9 @@ describe("adding items with table editor", function() {
 
   it("should add rice to tableItems", function(){
    editor.insertFoodItems();
-      
+   // test    
    editor.add_item();
-
+   // verify
    assert.equal(global.tableItems[0].name, "Rice");
    assert.equal(global.tableItems.length, 1);
   }); 
@@ -49,16 +49,16 @@ describe("removing items with table editor", function() {
     //adds beans
     editor.add_item();
 
-
+    // test function
     editor.remove_item("Rice-row", "Rice");
-
+    // verify
     assert.equal(global.tableItems.length, 1);
     assert.notEqual(global.tableItems[0].name, "Rice");
   });
 });
 
 
-// utility function for making deep copies of arrays
+// utility function for making deep copies of object arrays
 function copy(o) {
   var output, v, key;
   output = Array.isArray(o) ? [] : {};
