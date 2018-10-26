@@ -1,3 +1,8 @@
+  /**********************************************************************************
+  * This file holds all the js for adding/removing items from the food calculator 
+  * table as well as running updating the values stored in the calculator.
+  * Author: Landon Shumway
+  **********************************************************************************/
   
   function setUpPage(){
       insertNumbersIntoSelect();

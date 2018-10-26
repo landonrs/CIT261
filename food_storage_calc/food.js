@@ -1,3 +1,9 @@
+  /* *************************************************************************
+  * This file holds the FoodItem class and initializes all the food item 
+  * objects used in the app. It also initializes the arrays that are used
+  * to determine what items have / have not been added to the calculator table.
+  * Author: Landon Shumway
+  *****************************************************************************/
 class FoodItem {
     constructor(name, costPerCan, cupsPerCan, mealRationAmount) {
     this.name = name;
@@ -33,6 +39,7 @@ class FoodItem {
   //This array holds the food items that have been added to the table
   var tableItems = [];
 
+  // utitility function for mocking
   function getUnusedFoodItems() {
       return unusedFoodItems;
   }
