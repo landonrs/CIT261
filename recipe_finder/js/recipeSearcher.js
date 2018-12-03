@@ -12,6 +12,8 @@ class RecipeSearcher {
     static formResultPage(recipes) {
         console.log(recipes);
         let resultsDiv = document.getElementById("searchResults");
+        //clear previous results
+        resultsDiv.innerHTML = "";
         let recipeNum = recipes.count;
         let results = recipes.recipes;
 
@@ -34,7 +36,7 @@ class RecipeSearcher {
             <div class="centerImg foodBox">
                 <figure>
                     <figcaption class="foodTitle">${results[i + 1].title}</figcaption>
-                    <a href="${results[i].source_url}" target="_blank">
+                    <a href="${results[i + 1].source_url}" target="_blank">
                         <img class="foodImg" src="${results[i + 1].image_url}">
                     </a>
                 </figure>
@@ -42,7 +44,7 @@ class RecipeSearcher {
             <div class="rightImg foodBox">
                 <figure>
                     <figcaption class="foodTitle">${results[i + 2].title}</figcaption>
-                    <a href="${results[i].source_url}" target="_blank">
+                    <a href="${results[i + 2].source_url}" target="_blank">
                         <img class="foodImg" src="${results[i + 2].image_url}">
                     </a>
                 </figure>

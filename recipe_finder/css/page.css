@@ -8,6 +8,18 @@ figure {
     margin: 0;
 }
 
+#mainTitle { 
+    animation: enterTop 3s;
+    text-align: center;
+    font-family: cursive;
+}
+
+#instructions {
+    margin: 0 10%;
+    animation: enterTop 4s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #searchValue {
     position: relative;
     top: 5vh;
@@ -36,10 +48,6 @@ figure {
     padding-bottom: 5%;
 }
 
-.resultRow {
-    
-}
-
 .foodBox {
     margin-top:20%;
     margin-bottom: 20%;
@@ -49,22 +57,25 @@ figure {
     position: relative;
 }
 
+
 .leftImg {
     margin-left:2vw;
+    animation: enterLeft 1s;
 }
 
 .centerImg {
     margin-left:8vw;
+    animation: enterLeft 1.25s;
 }
 
 .rightImg {
     margin-left:8vw;
+    animation: enterLeft 1.5s;
 }
 
 .foodTitle {
     text-align: center;
     font-size: 1em;
-    /* white-space: nowrap; */
     overflow: hidden;
     text-overflow: ellipsis;
     max-height: 9ch;
@@ -75,4 +86,35 @@ figure {
     vertical-align: middle;
     position: absolute;
     top: 50px;
+}
+
+@keyframes enterLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enterTop {
+    0% {
+        opacity: 0;
+        transform: translatey(-5vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

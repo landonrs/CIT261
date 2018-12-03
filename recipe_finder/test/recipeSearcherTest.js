@@ -29,7 +29,6 @@ describe("populating result list", function() {
       
         RecipeSearcher.formResultPage(recipeResults);
         // verify
-        //console.log(resultDiv.innerHTML);
         console.log(resultDiv.innerHTML);
         assert.isTrue(resultDiv.hasChildNodes());
     });
