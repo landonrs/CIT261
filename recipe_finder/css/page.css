@@ -19,24 +19,27 @@ figure {
     background-color: rgb(218, 15, 0);
     width:100vw;
     margin-top: -3vh;
+    height: 30vh;
     /* position: relative;
     top:-50px;
     left:0; */
 }
 
 #mainTitle { 
-    animation: enterTop 3s;
+    animation: enterTop 1s;
     text-align: center;
-    font-family: cursive;
+    font-family: 'Lucida Sans';
     padding-top: 5%;
 }
 
 #instructions {
     max-width: 90%;
     margin: 0 10%;
+    padding-top: 5%;
     padding-bottom: 5%;
-    animation: enterTop 4s;
+    animation: fadeThroughBack 3s;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
 }
 
 #searchValue {
@@ -48,21 +51,12 @@ figure {
     border-radius: 5px;
 }
 
-#searchRatingButton {
-    position: relative;
-    display: inline-block;
-    top: 8vh;
-    width: 35vw;
-    height: 50px;
-    margin-left: 10vw; 
-}
-
-#searchTrendyButton {
+#searchButton {
     position: relative;
     top: 8vh;
-    width: 35vw;
+    width: 30vw;
     height: 50px;
-    margin-left: 10vw; 
+    margin-left: 35vw; 
 }
 
 #searchError {
@@ -130,6 +124,16 @@ figure {
     border-radius: 10px;
 }
 
+.card {
+    background-color: rgba(245, 245, 245, 0.863);
+    border-radius: 25px;
+    width:80vw;
+    margin-left: 8vw;
+    animation: fadeThroughBack 1s, moveShadow 3s;
+    margin-bottom: 5%;
+    box-shadow: 5px 20px 20px 10px rgba(0, 0, 0, 0.603);
+}
+
 @keyframes enterLeft {
     0% {
         opacity: 0;
@@ -153,11 +157,22 @@ figure {
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeThroughBack {
     0% {
         opacity: 0;
+        z-index: -1;
     }
     100% {
         opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes moveShadow {
+    0% {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    100% {
+        box-shadow: 5px 20px 20px 10px rgba(0, 0, 0, 0.603);
     }
 }
