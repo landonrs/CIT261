@@ -1,0 +1,23 @@
+{
+  "name": "recipe_finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha || exit 0",
+    "gits": "gitScript.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "jsdom": "^12.2.0",
+    "requirejs": "^2.3.6",
+    "sinon": "^7.0.0"
+  }
+}

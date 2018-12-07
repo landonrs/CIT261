@@ -1,0 +1,178 @@
+img {
+    max-width: 100%;
+    max-height: 50%;
+    margin-top: 4ch;
+}
+
+body {
+    background-image: url("../yellow-bg.jpg");
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+figure {
+    margin: 0;
+}
+
+#header {
+    background-color: rgb(218, 15, 0);
+    width:100vw;
+    margin-top: -3vh;
+    height: 30vh;
+    /* position: relative;
+    top:-50px;
+    left:0; */
+}
+
+#mainTitle { 
+    animation: enterTop 1s;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    padding-top: 5%;
+}
+
+#instructions {
+    max-width: 90%;
+    margin: 0 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    animation: fadeThroughBack 3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+#searchValue {
+    position: relative;
+    top: 5vh;
+    width: 50vw;
+    height: 8vh;
+    margin-left: 25vw;
+    border-radius: 5px;
+}
+
+#searchButton {
+    position: relative;
+    top: 8vh;
+    width: 30vw;
+    height: 50px;
+    margin-left: 35vw; 
+}
+
+#searchError {
+    text-align: center;
+    margin: 10% 10%;
+}
+
+#inputDiv {
+    /* background-color: red; */
+    height: 45vh;
+}
+
+#searchResults {
+    overflow: scroll;
+    height: 100vh;
+    padding-bottom: 5%;
+    position: relative;
+    top: -100px;
+    border-radius: 10px;
+    background-color: rgba(0, 61, 10, 0.877)
+}
+
+.foodBox {
+    margin-top:20%;
+    margin-bottom: 20%;
+    width: 25vw;
+    height:  20vh;
+    float: left;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px 4px rgba(0,0,0,0.5);
+    background-color: whitesmoke;
+}
+
+
+.leftImg {
+    margin-left:2vw;
+    animation: enterLeft 1s;
+}
+
+.centerImg {
+    margin-left:8vw;
+    animation: enterLeft 1.25s;
+}
+
+.rightImg {
+    margin-left:8vw;
+    animation: enterLeft 1.5s;
+}
+
+.foodTitle {
+    text-align: center;
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 9ch;
+    padding-top: 15px;
+}
+
+.foodImg {
+    width: 25vw;
+    vertical-align: middle;
+    position: absolute;
+    top: 9vh;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: rgba(245, 245, 245, 0.863);
+    border-radius: 25px;
+    width:80vw;
+    margin-left: 8vw;
+    animation: fadeThroughBack 1s, moveShadow 3s;
+    margin-bottom: 5%;
+    box-shadow: 5px 20px 20px 10px rgba(0, 0, 0, 0.603);
+}
+
+@keyframes enterLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enterTop {
+    0% {
+        opacity: 0;
+        transform: translatey(-5vh);
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeThroughBack {
+    0% {
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes moveShadow {
+    0% {
+        box-shadow: 0px 0px 0px 0px;
+    }
+    100% {
+        box-shadow: 5px 20px 20px 10px rgba(0, 0, 0, 0.603);
+    }
+}

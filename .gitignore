@@ -1,1 +1,3 @@
-node_modules
+*node_modules
+recipe_finder/js/recipeConfig.js
+class_exercises/foodApp/keys.js
