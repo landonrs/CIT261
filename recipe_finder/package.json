@@ -7,7 +7,7 @@
     "test": "mocha || exit 0",
     "gits": "gitScript.sh"
   },
-  "author": "",
+  "author": "Landonrs",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",

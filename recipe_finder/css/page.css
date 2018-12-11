@@ -5,7 +5,7 @@ img {
 }
 
 body {
-    background-image: url("../yellow-bg.jpg");
+    /* background-image: url("../yellow-bg.jpg"); */
     margin: 0;
     padding: 0;
     border: none;
@@ -20,6 +20,7 @@ figure {
     width:100vw;
     margin-top: -3vh;
     height: 30vh;
+    transition: background-color 3s;
     /* position: relative;
     top:-50px;
     left:0; */
@@ -76,7 +77,8 @@ figure {
     position: relative;
     top: -100px;
     border-radius: 10px;
-    background-color: rgba(0, 61, 10, 0.877)
+    background-color: rgba(0, 61, 10, 0.877);
+    transition: background-color 2s;
 }
 
 .foodBox {
