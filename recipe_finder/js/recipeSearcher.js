@@ -2,7 +2,7 @@ var URL = "";
 
 function getRecipes(ingredients, sortType) {
     this.setURL(ingredients, sortType);
-    console.log(URL);
+    // console.log(URL);
     fetch(URL).then(data => {
         // console.log(data);
         return data.json();

@@ -19,7 +19,7 @@ window.addEventListener("touchend", function(event) {
 
         // left to right swipe
         if (liftPoint > touchPoint + offset) {
-            console.log("swiped Right!");
+            // console.log("swiped Right!");
             header.setAttribute("style", "background-color:blue;");
             results.setAttribute("style", "background-color:red;");
             //this.document.body.style.backgroundImage = "none";
@@ -27,10 +27,9 @@ window.addEventListener("touchend", function(event) {
         }
         // right to left
         else if (liftPoint < touchPoint - offset) {
-            console.log("swiped Left!");
+            // console.log("swiped Left!");
             header.setAttribute("style", "background-color:rgb(218, 15, 0);");
             results.setAttribute("style", "background-color:rgba(0, 61, 10, 0.877);");
-            //this.document.body.style.backgroundImage = "url('yellow-bg.jpg')";
         }
     }
 })
