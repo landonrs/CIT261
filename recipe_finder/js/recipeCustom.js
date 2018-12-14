@@ -22,7 +22,6 @@ window.addEventListener("touchend", function(event) {
             // console.log("swiped Right!");
             header.setAttribute("style", "background-color:blue;");
             results.setAttribute("style", "background-color:red;");
-            //this.document.body.style.backgroundImage = "none";
 
         }
         // right to left

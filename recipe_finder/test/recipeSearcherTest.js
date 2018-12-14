@@ -3,9 +3,6 @@ var sinon = require('sinon');
 var recipeSearcher = require('../js/recipeSearcher');
 var jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-
-// const domString = '<!DOCTYPE html><html><head></head><body><button id="searchRatingButton" type="button"><button id="searchTrendyButton" type="button">search recent popular recipes</button>search recipes</button><div id="searchResults"></div></body></html>';
-// const dom = new JSDOM(domString);
 var dom = null;
 
 // use this to verify the function generates the correct html
